@@ -1,17 +1,6 @@
-# in_syngo
+<h1>PROJECT IN_SYNGO</h1>
+<img src= "https://user-images.githubusercontent.com/89659393/226292395-1dbff02e-a28a-4b0a-8982-e6c2ec5913b2.png"  style="align-items: center;"/>
 
-A new Flutter project.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# in_syngo" 
+<h2>How does this work??</h2>
+<p>We are a medium and an utility based application consisting of 2 end users which are the donor of the item and the reciver of the item where an NGO will serve as a medium between these two users </p>
