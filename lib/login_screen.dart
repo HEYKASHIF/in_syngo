@@ -1,7 +1,9 @@
-import 'dart:ffi';
-
-import 'package:flutter/cupertino.dart';
+//import 'dart:ffi';
+import 'package:in_syngo/Signup_Screen.dart';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+//import 'package:in_syngo/my_home.dart';
+import 'package:in_syngo/screens/home.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -36,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Text(
                 "LOGIN",
                 style: TextStyle(
-                    fontFamily: 'fredoka',
+                    
                     color: Colors.black,
                     fontSize: 24,
                     fontWeight: FontWeight.bold),
@@ -66,13 +68,23 @@ class _LoginScreenState extends State<LoginScreen> {
               // ElevatedButton(onPressed: null, child: Text("LOGIN", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),)
               // ),
 
-              ElevatedButton.icon(
-                onPressed: null,
-                icon: Icon(Icons.email),
-                label: Text(
-                  "SUBMIT",
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.bold),
+              Container(
+                margin: EdgeInsets.all(10.0),
+                child: ElevatedButton.icon(
+                  
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                    );
+                  },
+              
+                  icon: Icon(Icons.email),
+                  label: Text(
+                    "SUBMIT",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
 
@@ -137,7 +149,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               ElevatedButton.icon(
-                onPressed: null,
+                onPressed:  () {  
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SignupScreen()),
+    );
+  },
                 icon: const Icon(
                   Icons.verified_user_rounded,
                 ),
