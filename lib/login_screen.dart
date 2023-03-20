@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Email',
+                      labelText: 'USER ID',
                       icon: Icon(Icons.email)),
                 ),
               ),
@@ -86,27 +86,17 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
 
-              ElevatedButton.icon(
-                onPressed: null,
-                icon: Icon(
-                  Icons.facebook,
-                ),
-                label: Text(
-                  "LOGIN WITH FACEBOOK",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-              //     ElevatedButton(
-              //         onPressed: null,
-              //         child: Text(
-              //           "LOGIN WITH FACEBOOK",
-              //           style: TextStyle(
-              //               color: Colors.black, fontWeight: FontWeight.bold),
-              //         )
+              // ElevatedButton.icon(onPressed: null,
+              //     icon: Icon(Icons.facebook,
+              //     ),
+              //     label: Text(
+              //   "LOGIN WITH FACEBOOK",
+              //   style: TextStyle(
+              //       color: Colors.black, fontWeight: FontWeight.bold,
+              //   ),
               // ),
+              // ),
+              //
 
               Padding(
                 padding: EdgeInsets.all(10),
@@ -145,7 +135,20 @@ class _LoginScreenState extends State<LoginScreen> {
                         // ),
                       ]),
                 ),
-              )
+              ),
+              ElevatedButton.icon(
+                onPressed: null,
+                icon: const Icon(
+                  Icons.verified_user_rounded,
+                ),
+                label: Text(
+                  "SignUp",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
