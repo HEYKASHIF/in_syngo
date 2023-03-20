@@ -6,4 +6,7 @@
 <p> We are a medium and an utility based application consisting of 2 end users which are the donor of the item and the reciver of the item where an NGO will serve as a medium between these two users </p>
 
 ![image](https://user-images.githubusercontent.com/89659393/226295369-0a9a7263-b57b-4b53-87c5-13a558dbea02.png)
+![image](https://user-images.githubusercontent.com/89659393/226296062-9e4b10ac-b548-4fe4-916f-62d783ea6808.png)
+![image](https://user-images.githubusercontent.com/89659393/226296400-9f3704dd-d9ee-4abe-9d00-ae8f93d4471e.png)
+
 
