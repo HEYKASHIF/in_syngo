@@ -17,15 +17,18 @@ class _AddNoteState extends State<AddNote> {
       child: Container(
         height: 44.0,
         width: 345.0,
-        child:Center(
-          child: Text('Add a Note',
-          style: TextStyle(fontSize: 16.0,
-          fontStyle: FontStyle.italic,
-          fontWeight: FontWeight.w700),),
+        child: Center(
+          child: Text(
+            'DONATE',
+            style: TextStyle(
+                fontSize: 16.0,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w700),
+          ),
         ),
         decoration: BoxDecoration(
-          color: Color(0xffe8e8e9),
-          borderRadius: BorderRadius.circular(8.0)),
-      ),);
+            color: Color(0xffe8e8e9), borderRadius: BorderRadius.circular(8.0)),
+      ),
+    );
   }
 }
