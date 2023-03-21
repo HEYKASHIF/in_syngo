@@ -3,8 +3,8 @@
 <h1>What is IN_SYNGO?</h1>
 <p>IN_SYNGO is FLUTTER BASED APPLICATION which is working on social issue of Social Cause.
 So we know how much of clothes or study matireal we waste on regular basis instead and on the other half of the specturm there are lot of people living on streets fighting with tough conditions like cold straving in hunger so we can create a pipeline for so these people can access these resources and we as donor also need a medium who can actually give these resources to the needful person and redefine their use.We will do use by collabrating with NGOs near them. which are working centeral and state govt</p>
-<a href='https://ngodarpan.gov.in/index.php/home/statewise_ngo/5865/28/1'>Table from where we can fetcch data</a>
-<h1>Teachnologies Used</h1>
+<a href='https://ngodarpan.gov.in/index.php/home/statewise_ngo/5865/28/1'>Table from where we can fetch data</a>
+<h1>Technologies Used</h1>
 <ul>
 <li>Flutter</li>
 <li>Figma</li>
@@ -24,4 +24,12 @@ So we know how much of clothes or study matireal we waste on regular basis inste
 <img src="https://media1.giphy.com/media/l5s71uAp3CzKwxwkoZ/giphy.gif?cid=ecf05e47rs74h0j9d0q7otnztpzbquvyvl2z53ajrbgtqp3b&rid=giphy.gif&ct=g"/>
 
 # HOW TO RUN THE CODE?
-
+```
+  git clone
+```
+If you Flutter installed in your system run:
+```
+  flutter run
+```
+<p>If you havenot installed</p>
+<a href="https://docs.flutter.dev/get-started/install">GO here</a>
