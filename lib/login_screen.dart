@@ -1,9 +1,7 @@
 //import 'dart:ffi';
 import 'package:in_syngo/Signup_Screen.dart';
-//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 //import 'package:in_syngo/my_home.dart';
-import 'package:in_syngo/screens/home.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -38,7 +36,6 @@ class _LoginScreenState extends State<LoginScreen> {
               Text(
                 "LOGIN",
                 style: TextStyle(
-                    
                     color: Colors.black,
                     fontSize: 24,
                     fontWeight: FontWeight.bold),
@@ -71,14 +68,12 @@ class _LoginScreenState extends State<LoginScreen> {
               Container(
                 margin: EdgeInsets.all(10.0),
                 child: ElevatedButton.icon(
-                  
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => HomeScreen()),
                     );
                   },
-              
                   icon: Icon(Icons.email),
                   label: Text(
                     "SUBMIT",
@@ -149,12 +144,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               ElevatedButton.icon(
-                onPressed:  () {  
+                onPressed: () {
                   Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SignupScreen()),
-    );
-  },
+                    context,
+                    MaterialPageRoute(builder: (context) => SignupScreen()),
+                  );
+                },
                 icon: const Icon(
                   Icons.verified_user_rounded,
                 ),
