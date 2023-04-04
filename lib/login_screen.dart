@@ -94,6 +94,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       color: Colors.black, fontWeight: FontWeight.bold),
                 ),
               ),
+              ElevatedButton.icon(
+                onPressed: null,
+                icon: Icon(
+                  Icons.facebook,
+                ),
+                label: Text(
+                  "LOGIN WITH FACEBOOK",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
 
               // ElevatedButton.icon(onPressed: null,
               //     icon: Icon(Icons.facebook,

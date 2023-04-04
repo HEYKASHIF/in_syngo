@@ -14,6 +14,7 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightGreen,
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(50),
@@ -60,7 +61,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'Password',
+                      labelText: 'Create Password',
                       icon: Icon(Icons.password)),
                 ),
               ),
@@ -83,29 +84,6 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
 
-              ElevatedButton.icon(
-                onPressed: null,
-                icon: Icon(Icons.phone_android),
-                label: Text(
-                  "LOGIN WITH OTP",
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.bold),
-                ),
-              ),
-
-              ElevatedButton.icon(
-                onPressed: null,
-                icon: Icon(
-                  Icons.facebook,
-                ),
-                label: Text(
-                  "LOGIN WITH FACEBOOK",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
               //     ElevatedButton(
               //         onPressed: null,
               //         child: Text(
