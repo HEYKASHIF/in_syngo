@@ -1,4 +1,5 @@
 //import 'dart:ffi';
+import 'package:in_syngo/Homepage.dart';
 import 'package:in_syngo/Signup_Screen.dart';
 import 'package:flutter/material.dart';
 //import 'package:in_syngo/my_home.dart';
@@ -71,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()),
+                      MaterialPageRoute(builder: (context) => HomePage()),
                     );
                   },
                   icon: Icon(Icons.email),
@@ -145,10 +146,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               ElevatedButton.icon(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignupScreen()),
-                  );
+                 Navigator.push(context,
+                     MaterialPageRoute(builder: (context)=> SignupScreen()));
                 },
                 icon: const Icon(
                   Icons.verified_user_rounded,

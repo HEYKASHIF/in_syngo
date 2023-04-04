@@ -1,4 +1,5 @@
 import 'dart:ffi';
+import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
 
               Text(
-                "LOGIN",
+                "Sign up",
                 style: TextStyle(
                     fontFamily: 'fredoka',
                     color: Colors.black,
@@ -118,14 +119,25 @@ class _SignupScreenState extends State<SignupScreen> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
                         Center(
-                          child: Text(
-                            "Don't have an account?",
-                            style: TextStyle(
-                                color: Colors.red,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15),
-                          ),
+                          child:
+                           GestureDetector(
+                            onTap:(){
+                              Navigator.pop(context);
+                            },
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15),
+                      ),
+                  ),
+
                         ),
+
+
+
+
                         // ElevatedButton(
                         //   Padding(padding: EdgeInsets.all(10
                         //   ),
