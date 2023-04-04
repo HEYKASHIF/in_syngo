@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:in_syngo/Homepage.dart';
 
 class SignupScreen extends StatefulWidget {
   @override
@@ -68,7 +69,12 @@ class _SignupScreenState extends State<SignupScreen> {
               // ),
 
               ElevatedButton.icon(
-                onPressed: null,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
                 icon: Icon(Icons.email),
                 label: Text(
                   "SUBMIT",
@@ -119,24 +125,19 @@ class _SignupScreenState extends State<SignupScreen> {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: <Widget>[
                         Center(
-                          child:
-                           GestureDetector(
-                            onTap:(){
+                          child: GestureDetector(
+                            onTap: () {
                               Navigator.pop(context);
                             },
-                      child: Text(
-                        "Login",
-                        style: TextStyle(
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15),
-                      ),
-                  ),
-
+                            child: Text(
+                              "Login",
+                              style: TextStyle(
+                                  color: Colors.red,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15),
+                            ),
+                          ),
                         ),
-
-
-
 
                         // ElevatedButton(
                         //   Padding(padding: EdgeInsets.all(10

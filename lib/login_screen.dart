@@ -13,6 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlue,
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(50),
@@ -146,8 +147,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               ElevatedButton.icon(
                 onPressed: () {
-                 Navigator.push(context,
-                     MaterialPageRoute(builder: (context)=> SignupScreen()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignupScreen()));
                 },
                 icon: const Icon(
                   Icons.verified_user_rounded,
