@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:in_syngo/HomeCard.dart';
 
-class HomePage extends StatefulWidget{
+class HomePage extends StatefulWidget {
   @override
   HomePageState createState() => HomePageState();
 }
 
-class HomePageState extends State<HomePage>{
+class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,19 +18,21 @@ class HomePageState extends State<HomePage>{
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
-              backgroundImage: AssetImage("assets/icon/icon.png"),),
+              backgroundImage: AssetImage("assets/icon/icon.png"),
+            ),
           )
         ],
       ),
-          body: Column(
-            children: [
-              HomeCard(1, "Medicines", "assets/icon/medicine.png"),
-              HomeCard(2, "Clothes", "assets/icon/cloth.png"),
-              HomeCard(3, "Toy", "assets/icon/toy.png"),
-              HomeCard(4, "Book", "assets/icon/book.png"),
-              HomeCard(5, "Electronic", "assets/icon/electronic.png"),
-            ],
-          ),
+      body: Column(
+        children: [
+          HomeCard(1, "Medicines", "assets/icon/medicine.png"),
+          HomeCard(2, "Clothes", "assets/icon/cloth.png"),
+          HomeCard(3, "Toy", "assets/icon/toy.png"),
+          HomeCard(4, "Book", "assets/icon/book.png"),
+          HomeCard(5, "food", "assets/icon/food.png"),
+          HomeCard(5, "Electronic", "assets/icon/electronic.png"),
+        ],
+      ),
     );
   }
 }
