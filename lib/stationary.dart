@@ -14,6 +14,7 @@ class stationaryState extends State<stationary> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.yellow,
         title: const Text("STATIONARIES"),
       ),
       body: Column(

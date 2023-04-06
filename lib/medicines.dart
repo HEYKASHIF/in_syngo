@@ -15,6 +15,7 @@ class medicineState extends State<medicines> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.yellow,
         title: const Text("MEDICINES"),
       ),
       body: Column(

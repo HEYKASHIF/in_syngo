@@ -11,6 +11,7 @@ class electronicsState extends State<electronics> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.yellow,
         title: const Text("ELECTRONICS"),
       ),
       body: Column(

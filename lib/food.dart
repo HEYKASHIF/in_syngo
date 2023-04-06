@@ -14,6 +14,7 @@ class foodState extends State<food> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.yellow,
         title: const Text("FOOD"),
       ),
       body: Column(
