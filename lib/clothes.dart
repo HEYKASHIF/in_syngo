@@ -15,6 +15,7 @@ class clothesState extends State<clothes> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.yellow,
         title: const Text("CLOTHES"),
       ),
       body: Column(
