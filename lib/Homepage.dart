@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:in_syngo/HomeCard.dart';
+import 'package:in_syngo/sample.dart';
 
 class HomePage extends StatefulWidget{
   @override
@@ -7,9 +9,20 @@ class HomePage extends StatefulWidget{
 }
 
 class HomePageState extends State<HomePage>{
+
+  final List<SampleModal> CategoryList =[
+    SampleModal(1, "Medicines", "assets/icon/medicine.png"),
+    SampleModal(2, "Clothes", "assets/icon/cloth.png"),
+    SampleModal(3, "Toy", "assets/icon/toy.png"),
+    SampleModal(4, "Book", "assets/icon/book.png"),
+    SampleModal(5, "Electronic", "assets/icon/electronic.png"),
+    SampleModal(6, "Food", "assets/icon/food.png"),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
       appBar: AppBar(
         centerTitle: true,
         leading: Icon(Icons.menu),
@@ -22,15 +35,19 @@ class HomePageState extends State<HomePage>{
           )
         ],
       ),
-          body: Column(
-            children: [
-              HomeCard(1, "Medicines", "assets/icon/medicine.png"),
-              HomeCard(2, "Clothes", "assets/icon/cloth.png"),
-              HomeCard(3, "Toy", "assets/icon/toy.png"),
-              HomeCard(4, "Book", "assets/icon/book.png"),
-              HomeCard(5, "Electronic", "assets/icon/electronic.png"),
-            ],
-          ),
-    );
+          body:
+                // ListView.builder(
+                //     itemCount: CategoryList.length,
+                //     itemBuilder: (context,index){
+                //   return HomeCard(CategoryList[index].id, CategoryList[index].title, CategoryList[index].imagepath);
+                // }
+
+            GridView.builder(gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+            itemCount: CategoryList.length,
+            itemBuilder: (BuildContext context,int index) {
+              return HomeCard(CategoryList[index].id, CategoryList[index].title,
+                  CategoryList[index].imagepath);
+            } )
+          );
   }
 }
