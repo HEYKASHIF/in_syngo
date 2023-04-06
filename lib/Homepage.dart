@@ -25,6 +25,7 @@ class HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             HomeCard(1, "Medicines", "assets/icon/medicine.png"),
             HomeCard(2, "Clothes", "assets/icon/cloth.png"),
