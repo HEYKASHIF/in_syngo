@@ -2,26 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:in_syngo/sample.dart';
 
 // ignore: camel_case_types
-class medicine extends StatefulWidget {
-  final SampleModal data;
-
-  const medicine(this.data, {super.key});
+class medicines extends StatefulWidget {
+  const medicines({super.key});
 
   @override
-  medicineState createState() => medicineState(this.data);
+  medicineState createState() => medicineState();
 }
 
 // ignore: camel_case_types
-class medicineState extends State<medicine> {
-  final SampleModal data;
-
-  medicineState(this.data);
-
+class medicineState extends State<medicines> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("CLOTHES"),
+        title: const Text("MEDICINES"),
       ),
       body: Column(
         children: [

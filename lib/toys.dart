@@ -14,7 +14,7 @@ class toysState extends State<toys> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("CLOTHES"),
+        title: const Text("TOYS"),
       ),
       body: Column(
         children: [

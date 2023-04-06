@@ -11,7 +11,7 @@ class electronicsState extends State<electronics> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("CLOTHES"),
+        title: const Text("ELECTRONICS"),
       ),
       body: Column(
         children: [

@@ -4,11 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:in_syngo/clothes.dart';
 import 'package:in_syngo/electronics.dart';
 import 'package:in_syngo/food.dart';
-import 'package:in_syngo/form.dart';
 import 'package:in_syngo/medicines.dart';
 import 'package:in_syngo/stationary.dart';
 import 'package:in_syngo/toys.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HomeCard extends StatelessWidget {
   final int id;
@@ -24,30 +22,33 @@ class HomeCard extends StatelessWidget {
         NavigationFunction(id, context);
       },
       child: Card(
-        margin: EdgeInsets.all(50),
+        color: Colors.yellow,
         elevation: 5,
-        child: Container(
-          height: 100,
-          width: 200,
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  (Platform.isAndroid)
-                      ? Image.asset(
-                          imagepath,
-                          height: 20,
-                          width: 20,
-                          fit: BoxFit.fill,
-                        )
-                      : Container(),
-                  Text(
-                    title,
-                    style: TextStyle(fontSize: 16),
-                  )
-                ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Container(
+            height: 50,
+            width: 100,
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    (Platform.isAndroid)
+                        ? Image.asset(
+                            imagepath,
+                            height: 20,
+                            width: 20,
+                            fit: BoxFit.fill,
+                          )
+                        : Container(),
+                    Text(
+                      title,
+                      style: TextStyle(fontSize: 16),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
@@ -61,7 +62,7 @@ void NavigationFunction(int id, BuildContext context) {
   if (id == 1) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => medicine()),
+      MaterialPageRoute(builder: (context) => medicines()),
     );
   } else if (id == 2) {
     Navigator.push(

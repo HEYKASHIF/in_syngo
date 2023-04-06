@@ -14,7 +14,7 @@ class stationaryState extends State<stationary> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("CLOTHES"),
+        title: const Text("STATIONARIES"),
       ),
       body: Column(
         children: [
