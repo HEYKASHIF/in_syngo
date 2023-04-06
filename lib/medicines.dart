@@ -21,10 +21,22 @@ class medicineState extends State<medicine> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("MEDICINE"),
+        title: const Text("CLOTHES"),
       ),
-      body: Image.asset(data.imagepath),
-
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: TextFormField(
+              obscureText: true,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Name',
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

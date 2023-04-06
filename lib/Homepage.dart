@@ -23,15 +23,17 @@ class HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: Column(
-        children: [
-          HomeCard(1, "Medicines", "assets/icon/medicine.png"),
-          HomeCard(2, "Clothes", "assets/icon/cloth.png"),
-          HomeCard(3, "Toy", "assets/icon/toy.png"),
-          HomeCard(4, "Book", "assets/icon/book.png"),
-          HomeCard(5, "food", "assets/icon/food.png"),
-          HomeCard(5, "Electronic", "assets/icon/electronic.png"),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            HomeCard(1, "Medicines", "assets/icon/medicine.png"),
+            HomeCard(2, "Clothes", "assets/icon/cloth.png"),
+            HomeCard(3, "Toy", "assets/icon/toy.png"),
+            HomeCard(4, "Book", "assets/icon/book.png"),
+            HomeCard(5, "food", "assets/icon/food.png"),
+            HomeCard(6, "Electronic", "assets/icon/electronic.png"),
+          ],
+        ),
       ),
     );
   }

@@ -2,7 +2,12 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:in_syngo/clothes.dart';
+import 'package:in_syngo/electronics.dart';
+import 'package:in_syngo/food.dart';
+import 'package:in_syngo/form.dart';
 import 'package:in_syngo/medicines.dart';
+import 'package:in_syngo/stationary.dart';
+import 'package:in_syngo/toys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeCard extends StatelessWidget {
@@ -50,39 +55,38 @@ class HomeCard extends StatelessWidget {
       ),
     );
   }
+}
 
-  void NavigationFunction(int id, BuildContext context) {
-    if (id == 1) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => medicine()),
-      );
-    } else if (id == 2) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => clothes()),
-      );
-    } else if (id == 3) {
-      _launchInBrowser(Uri.parse("https://www.google.com/"));
-    } else if (id == 4) {
-      _makePhoneCall("+919311966636");
-    }
-  }
-
-  Future<void> _makePhoneCall(String phoneNumber) async {
-    final Uri launchUri = Uri(
-      scheme: 'tel',
-      path: phoneNumber,
+void NavigationFunction(int id, BuildContext context) {
+  if (id == 1) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => medicine()),
     );
-    await launchUrl(launchUri);
-  }
-
-  Future<void> _launchInBrowser(Uri url) async {
-    if (!await launchUrl(
-      url,
-      mode: LaunchMode.externalApplication,
-    )) {
-      throw Exception('Could not launch $url');
-    }
+  } else if (id == 2) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => clothes()),
+    );
+  } else if (id == 3) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => toys()),
+    );
+  } else if (id == 4) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => stationary()),
+    );
+  } else if (id == 5) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => food()),
+    );
+  } else if (id == 6) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => electronics()),
+    );
   }
 }
