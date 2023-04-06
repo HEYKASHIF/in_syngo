@@ -22,12 +22,13 @@ class HomeCard extends StatelessWidget {
         NavigationFunction(id, context);
       },
       child: Card(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
         color: Colors.yellow,
         elevation: 5,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Container(
-            height: 50,
+            height: 100,
             width: 100,
             child: Center(
               child: Padding(
