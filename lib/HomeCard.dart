@@ -8,18 +8,20 @@ import 'package:in_syngo/medicines.dart';
 import 'package:in_syngo/stationary.dart';
 import 'package:in_syngo/toys.dart';
 
+import 'ListOfNgo.dart';
+
 class HomeCard extends StatelessWidget {
-  final int id;
+  final int cat_id;
   final String title;
   final String imagepath;
 
-  HomeCard(this.id, this.title, this.imagepath);
+  HomeCard(this.cat_id, this.title, this.imagepath);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        NavigationFunction(id, context);
+        NavigationFunction(cat_id, context);
       },
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
@@ -59,36 +61,10 @@ class HomeCard extends StatelessWidget {
   }
 }
 
-void NavigationFunction(int id, BuildContext context) {
-  if (id == 1) {
+void NavigationFunction(int cat_id, BuildContext context) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => medicines()),
+      MaterialPageRoute(builder: (context) => ListOfNgo(cat_id)),
     );
-  } else if (id == 2) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => clothes()),
-    );
-  } else if (id == 3) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => toys()),
-    );
-  } else if (id == 4) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => stationary()),
-    );
-  } else if (id == 5) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => food()),
-    );
-  } else if (id == 6) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => electronics()),
-    );
-  }
+
 }

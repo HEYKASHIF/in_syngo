@@ -98,6 +98,7 @@ flutter:
   assets:
     - assets/
     - assets/icon/
+    - assets/json/ngo_data.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:
