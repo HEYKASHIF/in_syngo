@@ -87,24 +87,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
               ElevatedButton.icon(
                 onPressed: null,
-                icon: Icon(Icons.phone_android),
+                icon: Icon(Icons.mail),
                 label: Text(
-                  "LOGIN WITH OTP",
+                  "LOGIN WITH GOOGLE",
                   style: TextStyle(
                       color: Colors.black, fontWeight: FontWeight.bold),
-                ),
-              ),
-              ElevatedButton.icon(
-                onPressed: null,
-                icon: Icon(
-                  Icons.facebook,
-                ),
-                label: Text(
-                  "LOGIN WITH FACEBOOK",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  ),
                 ),
               ),
 
