@@ -16,15 +16,14 @@ class HomePageState extends State<HomePage> {
     SampleModal(4, "Stationary", "assets/icon/book.png"),
     SampleModal(5, "Food", "assets/icon/food.png"),
     SampleModal(6, "Electronics", "assets/icon/electronic.png"),
-
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
-
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
@@ -32,11 +31,10 @@ class HomePageState extends State<HomePage> {
               ),
               child: Text('Drawer Header'),
             ),
-
             ListTile(
               leading: Icon(Icons.home),
               title: Text("HOME"),
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(
                   context,
@@ -47,7 +45,7 @@ class HomePageState extends State<HomePage> {
             ListTile(
               leading: Icon(Icons.account_box),
               title: Text("Profile"),
-              onTap: (){
+              onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(
                   context,
@@ -55,13 +53,11 @@ class HomePageState extends State<HomePage> {
                 );
               },
             ),
-
           ],
         ),
       ),
-
-
       appBar: AppBar(
+        elevation: 0,
         centerTitle: true,
         title: Text("HOME"),
         actions: [
@@ -73,18 +69,16 @@ class HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body:
-            GridView.builder(
-              itemCount: CategoryList.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-              ),
-              itemBuilder: (BuildContext context, int index) {
-                return
-                  HomeCard(CategoryList[index].cat_id, CategoryList[index].title, CategoryList[index].imagepath);
-              },
+      body: GridView.builder(
+        itemCount: CategoryList.length,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+        ),
+        itemBuilder: (BuildContext context, int index) {
+          return HomeCard(CategoryList[index].cat_id, CategoryList[index].title,
+              CategoryList[index].imagepath);
+        },
       ),
     );
-
   }
 }
