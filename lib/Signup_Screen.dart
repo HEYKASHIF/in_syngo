@@ -39,7 +39,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Text(
                 "Sign up",
                 style: TextStyle(
-                    fontFamily: 'fredoka',
+                    fontFamily: 'Billabong',
                     color: Colors.black,
                     fontSize: 24,
                     fontWeight: FontWeight.bold),

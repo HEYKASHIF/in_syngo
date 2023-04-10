@@ -85,10 +85,10 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-  #fonts:
-  #  - family: fredoka
-  #    fonts:
-  #      - asset: fonts/fredoka.ttf
+  fonts:
+    - family: Billabong
+      fonts:
+        - asset: assets/fonts/Billabong.ttf
 #
   #  - family: gv
   #    fonts:
