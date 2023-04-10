@@ -108,7 +108,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               Navigator.pop(context);
                             },
                             child: Text(
-                              "Login",
+                              "BACK TO LOGIN PAGE",
                               style: TextStyle(
                                   color: Colors.red,
                                   fontWeight: FontWeight.bold,
