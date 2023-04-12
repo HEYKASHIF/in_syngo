@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:in_syngo/HomeCard.dart';
+import 'package:in_syngo/fAQ.dart';
 import 'package:in_syngo/profile.dart';
 import 'package:in_syngo/sample.dart';
 
@@ -55,12 +56,12 @@ class HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.home),
-              title: Text("HOME"),
+              title: Text("FAQ"),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => FAQ()),
                 );
               },
             ),
