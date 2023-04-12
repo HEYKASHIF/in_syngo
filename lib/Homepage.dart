@@ -4,6 +4,7 @@ import 'package:in_syngo/about_Us.dart';
 import 'package:in_syngo/activities_we_Do.dart';
 import 'package:in_syngo/contact_Us.dart';
 import 'package:in_syngo/fAQ.dart';
+import 'package:in_syngo/logOut.dart';
 import 'package:in_syngo/profile.dart';
 import 'package:in_syngo/sample.dart';
 
@@ -103,12 +104,12 @@ class HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.home),
-              title: Text("HOME"),
+              title: Text("LOGOUT"),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => Logout()),
                 );
               },
             ),
