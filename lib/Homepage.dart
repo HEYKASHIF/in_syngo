@@ -64,61 +64,7 @@ class HomePageState extends State<HomePage> {
                 );
               },
             ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("HOME"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("HOME"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("HOME"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("HOME"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text("HOME"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
-                );
-              },
-            ),
+            
           ],
         ),
       ),
