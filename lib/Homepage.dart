@@ -7,6 +7,7 @@ import 'package:in_syngo/fAQ.dart';
 import 'package:in_syngo/logOut.dart';
 import 'package:in_syngo/profile.dart';
 import 'package:in_syngo/sample.dart';
+import 'package:in_syngo/terms_&_Conditions.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -115,12 +116,12 @@ class HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.home),
-              title: Text("HOME"),
+              title: Text("TERMS & CONDITIONS"),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => TermsConditions()),
                 );
               },
             ),
