@@ -31,11 +31,32 @@ class HomePageState extends State<HomePage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
+            DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text('Drawer Header'),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      child: Text(
+                        'in_syngo',
+                        style: TextStyle(
+                          fontSize: 50,
+                          fontFamily: 'Billabong',
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                        child: CircleAvatar(
+                      backgroundImage: AssetImage('assets/icon/icon.png'),
+                      radius: 50,
+                    )),
+                  ),
+                ],
+              ),
             ),
             ListTile(
               leading: Icon(Icons.home),
