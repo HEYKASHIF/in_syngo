@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
@@ -19,8 +18,6 @@ class ListOfNgo extends StatefulWidget {
   ListOfNgoState createState() => ListOfNgoState(this.cat_id);
 }
 
-
-
 class ListOfNgoState extends State<ListOfNgo> {
   final int cat_id;
 
@@ -34,7 +31,7 @@ class ListOfNgoState extends State<ListOfNgo> {
     return 'success';
   }
 
-  NavigationScreen(int ngo_id){
+  NavigationScreen(int ngo_id) {
     if (cat_id == 1) {
       Navigator.push(
         context,
@@ -68,7 +65,6 @@ class ListOfNgoState extends State<ListOfNgo> {
     }
   }
 
-
   @override
   void initState() {
     super.initState();
@@ -77,42 +73,37 @@ class ListOfNgoState extends State<ListOfNgo> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text("List Of NGO"),
-      ),
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text("LIST OF NGO"),
+        ),
+        body: new ListView.builder(
+            itemCount: data == null ? 0 : data.length,
+            itemBuilder: (BuildContext context, int index) {
+              var name = data[index]['ngo_name'];
+              var ngo_logo = data[index]['ngo_logo'];
+              var email = data[index]['website'];
+              var ngo_id = data[index]['ngo_id'];
 
-      body:
-      new ListView.builder(
-          itemCount: data == null ? 0 : data.length,
-          itemBuilder: (BuildContext context, int index) {
-
-            var name = data[index]['ngo_name'];
-            var ngo_logo = data[index]['ngo_logo'];
-            var email = data[index]['website'];
-            var ngo_id = data[index]['ngo_id'];
-
-            return
-            (data[index]['cat_id']==cat_id)?
-
-              Column(
-              children: <Widget>[
-                GestureDetector(
-                  onTap: (){NavigationScreen(ngo_id);},
-                  child:  new ListTile(
-                    leading: CircleAvatar(
-                      child: new Image.network(ngo_logo),
-                    ),
-                    title: Text(name),
-                    subtitle: Text(email),
-                  ),
-                )
-            ],
-            )
-            :
-             Container();
-          })
-    );
+              return (data[index]['cat_id'] == cat_id)
+                  ? Column(
+                      children: <Widget>[
+                        GestureDetector(
+                          onTap: () {
+                            NavigationScreen(ngo_id);
+                          },
+                          child: new ListTile(
+                            leading: CircleAvatar(
+                              child: new Image.network(ngo_logo),
+                            ),
+                            title: Text(name),
+                            subtitle: Text(email),
+                          ),
+                        )
+                      ],
+                    )
+                  : Container();
+            }));
   }
 }
