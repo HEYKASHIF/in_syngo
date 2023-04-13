@@ -104,7 +104,7 @@ class HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.home),
+              leading: Icon(Icons.label_important),
               title: Text("TERMS & CONDITIONS"),
               onTap: () {
                 Navigator.of(context).pop();
