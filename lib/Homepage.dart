@@ -82,7 +82,7 @@ class HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.home),
+              leading: Icon(Icons.local_activity),
               title: Text("ACTIVITIES WE DO"),
               onTap: () {
                 Navigator.of(context).pop();
