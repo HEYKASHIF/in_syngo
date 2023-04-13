@@ -105,23 +105,23 @@ class HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.home),
-              title: Text("LOGOUT"),
-              onTap: () {
-                Navigator.of(context).pop();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Logout()),
-                );
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.home),
               title: Text("TERMS & CONDITIONS"),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => TermsConditions()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("LOGOUT"),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Logout()),
                 );
               },
             ),
