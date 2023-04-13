@@ -115,7 +115,7 @@ class HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.home),
+              leading: Icon(Icons.logout),
               title: Text("LOGOUT"),
               onTap: () {
                 Navigator.of(context).pop();
