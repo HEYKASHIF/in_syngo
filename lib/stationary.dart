@@ -66,7 +66,16 @@ class stationaryState extends State<stationary> {
                 labelText: 'Cost of Item Approximately',
               ),
             ),
-          )
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                  child: Image.asset('assets/icon/book.png'),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
