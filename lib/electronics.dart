@@ -14,11 +14,8 @@ class electronicsState extends State<electronics> {
         backgroundColor: Colors.blue,
         title: const Text("ELECTRONICS"),
         actions: [
-          Padding(
-            padding: EdgeInsets.only(right: 15),
-            child: CircleAvatar(
-              backgroundImage: AssetImage('assets/icon/icon.png'),
-            ),
+          CircleAvatar(
+            backgroundImage: AssetImage('assets/icon/icon.png'),
           ),
         ],
       ),
