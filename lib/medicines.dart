@@ -72,7 +72,7 @@ class medicineState extends State<medicines> {
           ),
           Row(
             children: [
-              Center(
+              Expanded(
                 child: Container(
                   child: Image.asset('assets/icon/medicine.png'),
                 ),
