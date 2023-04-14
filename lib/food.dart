@@ -66,7 +66,16 @@ class foodState extends State<food> {
                 labelText: 'how many people it can serve',
               ),
             ),
-          )
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                  child: Image.asset('assets/icon/food.png'),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );

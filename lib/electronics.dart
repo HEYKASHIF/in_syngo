@@ -63,7 +63,16 @@ class electronicsState extends State<electronics> {
                 labelText: 'product cost approximately',
               ),
             ),
-          )
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
+                  child: Image.asset('assets/icon/electronic.png'),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
