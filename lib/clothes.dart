@@ -17,6 +17,14 @@ class clothesState extends State<clothes> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text("CLOTHES"),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 15),
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/icon/icon.png'),
+            ),
+          ),
+        ],
       ),
       body: Column(
         children: [
