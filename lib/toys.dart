@@ -16,6 +16,14 @@ class toysState extends State<toys> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text("TOYS"),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 15),
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/icon/icon.png'),
+            ),
+          ),
+        ],
       ),
       body: Column(
         children: [
