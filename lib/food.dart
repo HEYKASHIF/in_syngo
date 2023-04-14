@@ -16,6 +16,11 @@ class foodState extends State<food> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text("FOOD"),
+        actions: [
+          CircleAvatar(
+            backgroundImage: AssetImage('assets/icon/icon.png'),
+          ),
+        ],
       ),
       body: Column(
         children: [
