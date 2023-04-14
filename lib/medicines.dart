@@ -15,9 +15,18 @@ class medicineState extends State<medicines> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        // centerTitle: true,
         backgroundColor: Colors.blue,
         title: const Text("MEDICINES"),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 15),
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/icon/icon.png'),
+              // radius: 50,
+            ),
+          ),
+        ],
       ),
       body: Column(
         children: [
