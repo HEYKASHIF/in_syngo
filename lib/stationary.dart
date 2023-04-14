@@ -16,6 +16,11 @@ class stationaryState extends State<stationary> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: const Text("STATIONARIES"),
+        actions: [
+          CircleAvatar(
+            backgroundImage: AssetImage('assets/icon/icon.png'),
+          ),
+        ],
       ),
       body: Column(
         children: [
