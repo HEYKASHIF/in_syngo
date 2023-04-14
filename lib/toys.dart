@@ -66,7 +66,14 @@ class toysState extends State<toys> {
                 labelText: 'Cost of Item Approximately',
               ),
             ),
-          )
+          ),
+          Row(
+            children: [
+              Container(
+                child: Image.asset('assets/icon/toy.png'),
+              ),
+            ],
+          ),
         ],
       ),
     );
