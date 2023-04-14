@@ -67,7 +67,14 @@ class clothesState extends State<clothes> {
                 labelText: 'pairs',
               ),
             ),
-          )
+          ),
+          Row(
+            children: [
+              Container(
+                child: Image.asset('assets/icon/cloth.png'),
+              ),
+            ],
+          ),
         ],
       ),
     );
