@@ -69,8 +69,10 @@ class toysState extends State<toys> {
           ),
           Row(
             children: [
-              Container(
-                child: Image.asset('assets/icon/toy.png'),
+              Expanded(
+                child: Container(
+                  child: Image.asset('assets/icon/toy.png'),
+                ),
               ),
             ],
           ),
