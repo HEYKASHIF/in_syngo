@@ -17,8 +17,11 @@ class stationaryState extends State<stationary> {
         backgroundColor: Colors.blue,
         title: const Text("STATIONARIES"),
         actions: [
-          CircleAvatar(
-            backgroundImage: AssetImage('assets/icon/icon.png'),
+          Padding(
+            padding: EdgeInsets.only(right: 15),
+            child: CircleAvatar(
+              backgroundImage: AssetImage('assets/icon/icon.png'),
+            ),
           ),
         ],
       ),
