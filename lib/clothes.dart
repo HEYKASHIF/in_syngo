@@ -72,7 +72,17 @@ class clothesState extends State<clothes> {
             children: [
               Expanded(
                 child: Container(
-                  child: Image.asset('assets/icon/cloth.png'),
+                  child: Image.asset(
+                    'assets/icon/icon.png',
+                    height: 100,
+                    width: 100,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: TextButton(
+                  onPressed: null,
+                  child: Text("UPLOAD IMAGE"),
                 ),
               ),
             ],
