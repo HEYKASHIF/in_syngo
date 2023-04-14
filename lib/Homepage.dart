@@ -152,7 +152,11 @@ class HomePageState extends State<HomePage> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
-        title: Text("HOME"),
+        title: Text(
+          "HOME",
+          style: TextStyle(
+              fontFamily: 'Billabong', fontSize: 30, color: Colors.black),
+        ),
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),

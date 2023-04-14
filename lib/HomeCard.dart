@@ -41,14 +41,17 @@ class HomeCard extends StatelessWidget {
                     (Platform.isAndroid)
                         ? Image.asset(
                             imagepath,
-                            height: 20,
-                            width: 20,
+                            height: 45,
+                            width: 45,
                             fit: BoxFit.fill,
                           )
                         : Container(),
                     Text(
                       title,
-                      style: TextStyle(fontSize: 16),
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontFamily: 'Billabong',
+                      ),
                     )
                   ],
                 ),
@@ -62,9 +65,8 @@ class HomeCard extends StatelessWidget {
 }
 
 void NavigationFunction(int cat_id, BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => ListOfNgo(cat_id)),
-    );
-
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => ListOfNgo(cat_id)),
+  );
 }
