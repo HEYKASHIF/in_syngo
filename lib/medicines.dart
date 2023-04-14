@@ -69,7 +69,16 @@ class medicineState extends State<medicines> {
                 labelText: 'Quantity of tablets',
               ),
             ),
-          )
+          ),
+          Row(
+            children: [
+              Center(
+                child: Container(
+                  child: Image.asset('assets/icon/medicine.png'),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
