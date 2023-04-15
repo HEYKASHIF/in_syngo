@@ -131,9 +131,12 @@ class clothesState extends State<clothes> {
                       ),
                     ),
                     Expanded(
-                      child: ElevatedButton(
-                        onPressed: pickImageGallery,
-                        child: Text("UPLOAD IMAGE BY GALLERY"),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 70, 20, 70),
+                        child: ElevatedButton(
+                          onPressed: pickImageGallery,
+                          child: Text("UPLOAD IMAGE BY GALLERY"),
+                        ),
                       ),
                     ),
                   ],
