@@ -34,6 +34,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   carousel_slider: ^4.2.1
   velocity_x: ^3.5.1
+  image_picker: ^0.8.7+2
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -43,7 +44,7 @@ dependencies:
   material: ^1.0.0+2
   intro_screen_onboarding_flutter: ^1.0.0
   url_launcher: ^6.1.10
-  image_picker: ^0.8.7+2
+  
 
 flutter_icons:
   android: "launcher_icon"

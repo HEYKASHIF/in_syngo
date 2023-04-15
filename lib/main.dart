@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
         //
 
         child: AnimatedSplashScreen(
+            splashIconSize: 1000,
             duration: 3000,
             splash: Image.asset("assets/spl.jpg", height: 500, width: 500),
             nextScreen: TestScreen(),
