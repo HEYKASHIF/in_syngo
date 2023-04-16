@@ -91,15 +91,45 @@ class electronicsState extends State<electronics> {
               ),
             ),
           ),
-          Row(
+          Expanded(
+              child: Row(
             children: [
-              Expanded(
-                child: Container(
-                  child: Image.asset('assets/icon/electronic.png'),
-                ),
-              ),
+              (image != null)
+                  ? Expanded(
+                      child: Container(
+                        child: Image.file(
+                          image!,
+                          height: 100,
+                          width: 100,
+                        ),
+                      ),
+                    )
+                  : Expanded(
+                      child: Container(
+                        child: Image.asset(
+                          'assets/icon/icon.png',
+                          height: 100,
+                          width: 100,
+                        ),
+                      ),
+                    ),
+              Column(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(20, 70, 20, 70),
+                      child: ElevatedButton(
+                        onPressed: pickImageCamera,
+                        child: Text(
+                          'UPLOAD IMAGE BY CAMERA',
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
-          ),
+          ))
         ],
       ),
     );
