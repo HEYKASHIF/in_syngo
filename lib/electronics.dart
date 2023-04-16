@@ -126,6 +126,15 @@ class electronicsState extends State<electronics> {
                       ),
                     ),
                   ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(20, 70, 20, 70),
+                      child: ElevatedButton(
+                        onPressed: pickImageGallery,
+                        child: Text('UPLOAD IMAGE BY GALLERY'),
+                      ),
+                    ),
+                  ),
                 ],
               )
             ],
