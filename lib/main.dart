@@ -2,6 +2,8 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:in_syngo/login_screen.dart';
 import 'package:intro_screen_onboarding_flutter/intro_app.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'Homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -74,13 +76,25 @@ class TestScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return IntroScreenOnboarding(
       introductionList: list,
-      onTapSkipButton: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => LoginScreen(),
-          ), //MaterialPageRoute
-        );
+      onTapSkipButton: () async {
+        final SharedPreferences prefs = await SharedPreferences.getInstance();
+        final bool? is_login = prefs.getBool('is_login');
+
+        if (is_login == false) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => LoginScreen(),
+            ), //MaterialPageRoute
+          );
+        } else {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => HomePage(),
+            ), //MaterialPageRoute
+          );
+        }
       },
     );
   }

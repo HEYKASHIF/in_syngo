@@ -44,6 +44,9 @@ dependencies:
   material: ^1.0.0+2
   intro_screen_onboarding_flutter: ^1.0.0
   url_launcher: ^6.1.10
+  shared_preferences: ^2.1.0
+  firebase_auth: ^4.4.1
+  google_sign_in: ^6.1.0
   
 
 flutter_icons:
