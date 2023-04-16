@@ -94,28 +94,59 @@ class toysState extends State<toys> {
           ),
         ),
         Expanded(
-            child: Row(
-          children: [
-            (image != null)
-                ? Expanded(
-                    child: Container(
-                      child: Image.file(
-                        image!,
-                        height: 100,
-                        width: 100,
+          child: Row(
+            children: [
+              (image != null)
+                  ? Expanded(
+                      child: Container(
+                        child: Image.file(
+                          image!,
+                          height: 100,
+                          width: 100,
+                        ),
+                      ),
+                    )
+                  : Expanded(
+                      child: Container(
+                        child: Image.asset(
+                          'assets/icon/icon.png',
+                          height: 100,
+                          width: 100,
+                        ),
                       ),
                     ),
-                  )
-                : Expanded(
-                    child: Container(
-                    child: Image.asset(
-                      'assets/icon/icon.png',
-                      height: 100,
-                      width: 100,
+              Column(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(20, 70, 20, 70),
+                      child: ElevatedButton(
+                        onPressed: pickImageCamera,
+                        child: Text(
+                          'UPLOAD IMAGE BY CAMERA',
+                        ),
+                      ),
                     ),
-                  ))
-          ],
-        ))
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(
+                        20,
+                        70,
+                        20,
+                        70,
+                      ),
+                      child: ElevatedButton(
+                        onPressed: pickImageGallery,
+                        child: Text('UPLOAD IMAGE BY GALLERY'),
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
       ]),
     );
   }
