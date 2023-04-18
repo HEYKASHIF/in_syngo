@@ -1,7 +1,11 @@
 //import 'dart:ffi';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:in_syngo/Homepage.dart';
 import 'package:in_syngo/Signup_Screen.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 //import 'package:in_syngo/my_home.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -10,6 +14,33 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  Future<UserCredential> signInWithGoogle() async {
+    Firebase.initializeApp();
+    // Trigger the authentication flow
+    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+
+    // Obtain the auth details from the request
+    final GoogleSignInAuthentication? googleAuth =
+        await googleUser?.authentication;
+
+    // Create a new credential
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth?.accessToken,
+      idToken: googleAuth?.idToken,
+    );
+    UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
+    final userName = userCredential.additionalUserInfo!.username;
+    print(userCredential.additionalUserInfo!);
+
+    if (credential != null) {
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.setBool('is_login', true);
+    }
+
+    // Once signed in, return the UserCredential
+    return await FirebaseAuth.instance.signInWithCredential(credential);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,7 +118,9 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
 
               ElevatedButton.icon(
-                onPressed: null,
+                onPressed: () {
+                  signInWithGoogle();
+                },
                 icon: Icon(Icons.mail),
                 label: Text(
                   "LOGIN WITH GOOGLE",

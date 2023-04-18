@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "360523909722",
+    "project_id": "insyngo-142fa",
+    "storage_bucket": "insyngo-142fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360523909722:android:d97949c1930a832845e663",
+        "android_client_info": {
+          "package_name": "com.example.in_syngo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "360523909722-91a6oejd0qd5jnf691podbhp4u4dk66r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu0PaXZRhk6bE9hcpTDgmOoR4M9yXz07I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "360523909722-91a6oejd0qd5jnf691podbhp4u4dk66r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
