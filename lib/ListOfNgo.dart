@@ -35,12 +35,12 @@ class ListOfNgoState extends State<ListOfNgo> {
     if (cat_id == 1) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => medicines()),
+        MaterialPageRoute(builder: (context) => medicines(ngo_id: ngo_id,)),
       );
     } else if (cat_id == 2) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => clothes()),
+        MaterialPageRoute(builder: (context) => clothes(ngo_id: ngo_id,)),
       );
     } else if (cat_id == 3) {
       Navigator.push(

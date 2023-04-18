@@ -7,15 +7,18 @@ import 'package:in_syngo/sample.dart';
 
 // ignore: camel_case_types
 class clothes extends StatefulWidget {
-  const clothes({super.key});
+  final int ngo_id;
+  const clothes({super.key, required this.ngo_id});
 
   @override
-  clothesState createState() => clothesState();
+  clothesState createState() => clothesState(this.ngo_id);
 }
 
 // ignore: camel_case_types
 class clothesState extends State<clothes> {
   File? image;
+  final int ngo_id;
+  clothesState(this.ngo_id);
   Future pickImageGallery() async {
     try {
       final image = await ImagePicker().pickImage(source: ImageSource.gallery);
