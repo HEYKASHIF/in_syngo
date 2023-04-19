@@ -17,7 +17,7 @@ class _SignupScreenState extends State<SignupScreen> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.all(50),
+          //margin: EdgeInsets.all(50),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
@@ -43,6 +43,50 @@ class _SignupScreenState extends State<SignupScreen> {
                     color: Colors.black,
                     fontSize: 24,
                     fontWeight: FontWeight.bold),
+              ),
+
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'NAME',
+                      icon: Icon(Icons.password)),
+                ),
+              ),
+
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'GENDER',
+                      icon: Icon(Icons.password)),
+                ),
+              ),
+
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'PHONE NUMBER ',
+                      icon: Icon(Icons.password)),
+                ),
+              ),
+
+              Padding(
+                padding: EdgeInsets.all(10),
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'AGE',
+                      icon: Icon(Icons.password)),
+                ),
               ),
 
               Padding(
@@ -96,7 +140,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: Container(
-                  margin: EdgeInsets.only(top: 120),
+                  margin: EdgeInsets.only(top: 50),
                   alignment: Alignment.bottomCenter,
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -108,7 +152,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               Navigator.pop(context);
                             },
                             child: Text(
-                              "BACK TO LOGIN PAGE",
+                              "Already SignUp",
                               style: TextStyle(
                                   color: Colors.red,
                                   fontWeight: FontWeight.bold,
