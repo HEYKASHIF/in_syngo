@@ -5,13 +5,16 @@ import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 
 class electronics extends StatefulWidget {
-  const electronics({super.key});
+  final int ngo_id;
+  const electronics({super.key, required this.ngo_id});
   @override
-  electronicsState createState() => electronicsState();
+  electronicsState createState() => electronicsState(this.ngo_id);
 }
 
 class electronicsState extends State<electronics> {
   File? image;
+  final int ngo_id;
+  electronicsState(this.ngo_id);
   Future pickImageGallery() async {
     try {
       final image = await ImagePicker().pickImage(source: ImageSource.gallery);

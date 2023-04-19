@@ -60,7 +60,7 @@ class ListOfNgoState extends State<ListOfNgo> {
     } else if (cat_id == 6) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => electronics()),
+        MaterialPageRoute(builder: (context) => electronics(ngo_id: ngo_id,)),
       );
     }
   }
