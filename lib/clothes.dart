@@ -147,6 +147,13 @@ class clothesState extends State<clothes> {
               ],
             ),
           ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(100, 5, 100, 5),
+            child: ElevatedButton(
+              onPressed: null,
+              child: Text('SUBMIT'),
+            ),
+          ),
         ],
       ),
     );
