@@ -50,7 +50,7 @@ class ListOfNgoState extends State<ListOfNgo> {
     } else if (cat_id == 4) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => stationary()),
+        MaterialPageRoute(builder: (context) => stationary(ngo_id: ngo_id,)),
       );
     } else if (cat_id == 5) {
       Navigator.push(
