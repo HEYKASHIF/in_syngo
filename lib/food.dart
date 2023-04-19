@@ -6,15 +6,18 @@ import 'package:image_picker/image_picker.dart';
 
 // ignore: camel_case_types
 class food extends StatefulWidget {
-  const food({super.key});
+  final int ngo_id;
+  const food({super.key, required this.ngo_id});
 
   @override
-  foodState createState() => foodState();
+  foodState createState() => foodState(this.ngo_id);
 }
 
 // ignore: camel_case_types
 class foodState extends State<food> {
   File? image;
+  final int ngo_id;
+  foodState(this.ngo_id);
   Future pickImageGallery() async {
     try {
       final image = await ImagePicker().pickImage(source: ImageSource.gallery);
