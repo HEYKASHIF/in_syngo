@@ -144,7 +144,7 @@ class electronicsState extends State<electronics> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(100, 5, 100, 5),
+            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
             child: ElevatedButton(
               onPressed: null,
               child: Text('SUBMIT'),

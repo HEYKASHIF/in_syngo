@@ -28,7 +28,8 @@ class _LoginScreenState extends State<LoginScreen> {
       accessToken: googleAuth?.accessToken,
       idToken: googleAuth?.idToken,
     );
-    UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
+    UserCredential userCredential =
+        await FirebaseAuth.instance.signInWithCredential(credential);
     final userName = userCredential.additionalUserInfo!.username;
     print(userCredential.additionalUserInfo!);
 
@@ -100,7 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
               // ),
 
               Container(
-                margin: EdgeInsets.all(10.0),
+                padding: EdgeInsets.all(20),
                 child: ElevatedButton.icon(
                   onPressed: () {
                     Navigator.push(
@@ -110,7 +111,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   icon: Icon(Icons.email),
                   label: Text(
-                    "SUBMIT",
+                    "          SUBMIT              ",
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold),
                   ),
