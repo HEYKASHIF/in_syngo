@@ -28,7 +28,7 @@ class profileState extends State<profile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 10, 250, 10),
+            padding: const EdgeInsets.fromLTRB(0, 50, 250, 10),
             child: Text(
               'MOHD KASHIF',
               style: TextStyle(
@@ -38,7 +38,7 @@ class profileState extends State<profile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 10, 275, 10),
+            padding: const EdgeInsets.fromLTRB(0, 50, 275, 10),
             child: Text(
               'E-MAIL ID',
               style: TextStyle(
@@ -48,7 +48,7 @@ class profileState extends State<profile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 10, 300, 10),
+            padding: const EdgeInsets.fromLTRB(0, 50, 300, 10),
             child: Text(
               'GENDER',
               style: TextStyle(
@@ -58,7 +58,7 @@ class profileState extends State<profile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 10, 225, 10),
+            padding: const EdgeInsets.fromLTRB(0, 50, 225, 10),
             child: Text(
               'PHONE NUMBER',
               style: TextStyle(
@@ -68,7 +68,7 @@ class profileState extends State<profile> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(0, 10, 350, 10),
+            padding: const EdgeInsets.fromLTRB(0, 50, 350, 10),
             child: Text(
               'AGE',
               style: TextStyle(
