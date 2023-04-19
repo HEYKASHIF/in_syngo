@@ -149,6 +149,13 @@ class medicineState extends State<medicines> {
               ],
             ),
           ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(100, 5, 100, 5),
+            child: ElevatedButton(
+              onPressed: null,
+              child: Text('SUBMIT'),
+            ),
+          ),
         ],
       ),
     );
