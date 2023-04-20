@@ -101,6 +101,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: TextField(
+                  controller: genderController,
                   // obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
