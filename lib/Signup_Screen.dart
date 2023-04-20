@@ -1,10 +1,12 @@
 import 'dart:ffi';
 import 'dart:io';
+import 'package:intl/intl.dart';
 
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:in_syngo/Homepage.dart';
+import 'package:in_syngo/signModle.dart';
 
 class SignupScreen extends StatefulWidget {
   @override
@@ -13,21 +15,21 @@ class SignupScreen extends StatefulWidget {
 
 class _SignupScreenState extends State<SignupScreen> {
   final nameController = TextEditingController();
-  final ItemNameController = TextEditingController();
+  final genderController = TextEditingController();
   final weightController = TextEditingController();
   final costController = TextEditingController();
   final costController = TextEditingController();
   final costController = TextEditingController();
 
   sendData() {
-    final databaseReference = FirebaseDatabase.instance.ref("toy");
+    final databaseReference = FirebaseDatabase.instance.ref("USER");
 
     // final bytes = File(image!.path).readAsBytesSync();
     // String base64Image = "data:image/png;base64," + base64Encode(bytes);
 
-    final toy = toyModle(
+    final toy = signModle(
       '${nameController.text}',
-      '${ItemNameController.text}',
+      '${genderController.text}',
       double.parse('${weightController.text}'),
       int.parse('${costController.text}'),
       // '$base64Image'
@@ -40,7 +42,7 @@ class _SignupScreenState extends State<SignupScreen> {
       // "ngo_id": ngo_id.toString(),
       "status": "Request Submit",
       'name': toy.name,
-      'statName': toy.ItemName,
+      'gender': toy.gender,
       'weight': toy.weight,
       'cost': toy.cost,
       // 'image': toy.image,
