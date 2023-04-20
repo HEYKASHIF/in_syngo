@@ -18,7 +18,7 @@ class _SignupScreenState extends State<SignupScreen> {
   final genderController = TextEditingController();
   final numberController = TextEditingController();
   final ageController = TextEditingController();
-  final costController = TextEditingController();
+  final emailController = TextEditingController();
   final costController = TextEditingController();
 
   sendData() {
@@ -27,11 +27,12 @@ class _SignupScreenState extends State<SignupScreen> {
     // final bytes = File(image!.path).readAsBytesSync();
     // String base64Image = "data:image/png;base64," + base64Encode(bytes);
 
-    final toy = signModle(
+    final user = signModle(
       '${nameController.text}',
       '${genderController.text}',
       int.parse('${numberController.text}'),
       int.parse('${ageController.text}'),
+      '${emailController.text}',
       // '$base64Image'
     );
 
@@ -41,10 +42,11 @@ class _SignupScreenState extends State<SignupScreen> {
     databaseReference.child(formattedDate).set({
       // "ngo_id": ngo_id.toString(),
       "status": "Request Submit",
-      'name': toy.name,
-      'gender': toy.gender,
-      'number': toy.number,
-      'age': toy.age,
+      'name': user.name,
+      'gender': user.gender,
+      'number': user.number,
+      'age': user.age,
+      'email': user.email,
       // 'image': toy.image,
     });
   }
