@@ -163,10 +163,11 @@ class _SignupScreenState extends State<SignupScreen> {
 
               ElevatedButton.icon(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
-                  );
+                  sendData();
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => HomePage()),
+                  // );
                 },
                 icon: Icon(Icons.email),
                 label: Text(
