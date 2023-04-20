@@ -117,6 +117,7 @@ class toysState extends State<toys> {
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: TextFormField(
+            controller: weightController,
             // obscureText: true,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
