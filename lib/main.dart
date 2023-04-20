@@ -1,11 +1,21 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:in_syngo/login_screen.dart';
 import 'package:intro_screen_onboarding_flutter/intro_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'Homepage.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: FirebaseOptions(
+          apiKey: "AIzaSyCu0PaXZRhk6bE9hcpTDgmOoR4M9yXz07I",
+          appId: "1:360523909722:android:d97949c1930a832845e663",
+          messagingSenderId: "360523909722",
+          projectId: "insyngo-142fa"));
   runApp(const MyApp());
 }
 

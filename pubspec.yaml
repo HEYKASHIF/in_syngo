@@ -48,6 +48,7 @@ dependencies:
   firebase_auth: ^4.4.1
   google_sign_in: ^6.1.0
   firebase_core: ^2.9.0
+  firebase_database: ^10.1.1
   
 
 flutter_icons:
