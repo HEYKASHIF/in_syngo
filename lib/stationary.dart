@@ -60,7 +60,7 @@ class stationaryState extends State<stationary> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Your Name please',
@@ -70,7 +70,7 @@ class stationaryState extends State<stationary> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Stationary Name',
@@ -80,7 +80,7 @@ class stationaryState extends State<stationary> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Quantatity of Item',
@@ -90,7 +90,7 @@ class stationaryState extends State<stationary> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Cost of Item Approximately',
