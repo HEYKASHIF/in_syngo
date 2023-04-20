@@ -55,7 +55,7 @@ class foodState extends State<food> {
     final bytes = File(image!.path).readAsBytesSync();
     String base64Image = "data:image/png;base64," + base64Encode(bytes);
 
-    final electro = foodModle(
+    final food = foodModle(
         '${nameController.text}',
         '${FoodNameController.text}',
         double.parse('${weightController.text}'),
@@ -68,11 +68,11 @@ class foodState extends State<food> {
     databaseReference.child(formattedDate).set({
       "ngo_id": ngo_id.toString(),
       "status": "Request Submit",
-      'name': electro.name,
-      'FoodName': electro.FoodName,
-      'weight': electro.weight,
-      'servings': electro.servings,
-      'image': electro.image,
+      'name': food.name,
+      'FoodName': food.FoodName,
+      'weight': food.weight,
+      'servings': food.servings,
+      'image': food.image,
     });
   }
 

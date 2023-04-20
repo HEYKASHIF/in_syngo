@@ -1,8 +1,12 @@
+import 'dart:convert';
 import 'dart:io';
+import 'package:intl/intl.dart';
 
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:in_syngo/mediModle.dart';
 import 'package:in_syngo/sample.dart';
 
 // ignore: camel_case_types
@@ -41,6 +45,38 @@ class medicineState extends State<medicines> {
     }
   }
 
+  final nameController = TextEditingController();
+  final mediNameController = TextEditingController();
+  final dateController = TextEditingController();
+  final no_of_tabletsController = TextEditingController();
+
+  sendData() {
+    final databaseReference = FirebaseDatabase.instance.ref("medicines");
+
+    final bytes = File(image!.path).readAsBytesSync();
+    String base64Image = "data:image/png;base64," + base64Encode(bytes);
+
+    final medi = mediModle(
+        '${nameController.text}',
+        '${mediNameController.text}',
+        '${dateController.text}',
+        int.parse('${no_of_tabletsController.text}'),
+        '$base64Image');
+
+    DateTime now = DateTime.now();
+    String formattedDate = DateFormat('kk:mm:ss EEE d MMM').format(now);
+
+    databaseReference.child(formattedDate).set({
+      "ngo_id": ngo_id.toString(),
+      "status": "Request Submit",
+      'name': medi.name,
+      'mediName': medi.mediName,
+      'date': medi.date,
+      'no_of_tablets': medi.no_of_tablets,
+      'image': medi.image,
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,6 +99,7 @@ class medicineState extends State<medicines> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: nameController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -73,6 +110,7 @@ class medicineState extends State<medicines> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: mediNameController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -83,6 +121,7 @@ class medicineState extends State<medicines> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: dateController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -93,6 +132,7 @@ class medicineState extends State<medicines> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: no_of_tabletsController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -152,7 +192,7 @@ class medicineState extends State<medicines> {
           Padding(
             padding: EdgeInsets.fromLTRB(100, 5, 100, 5),
             child: ElevatedButton(
-              onPressed: null,
+              onPressed: sendData,
               child: Text('SUBMIT'),
             ),
           ),
