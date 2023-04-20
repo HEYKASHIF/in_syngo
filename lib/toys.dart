@@ -59,7 +59,7 @@ class toysState extends State<toys> {
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: TextFormField(
-            obscureText: true,
+            // obscureText: true,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Your Name Please',
@@ -69,7 +69,7 @@ class toysState extends State<toys> {
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: TextFormField(
-            obscureText: true,
+            // obscureText: true,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Name of the Item',
@@ -79,7 +79,7 @@ class toysState extends State<toys> {
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: TextFormField(
-            obscureText: true,
+            // obscureText: true,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Weight of the Item',
@@ -89,7 +89,7 @@ class toysState extends State<toys> {
         Padding(
           padding: const EdgeInsets.all(12.0),
           child: TextFormField(
-            obscureText: true,
+            // obscureText: true,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Cost of Item Approximately',
