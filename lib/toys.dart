@@ -50,7 +50,7 @@ class toysState extends State<toys> {
   final costController = TextEditingController();
 
   sendData() {
-    final databaseReference = FirebaseDatabase.instance.ref("stationary");
+    final databaseReference = FirebaseDatabase.instance.ref("toy");
 
     final bytes = File(image!.path).readAsBytesSync();
     String base64Image = "data:image/png;base64," + base64Encode(bytes);
