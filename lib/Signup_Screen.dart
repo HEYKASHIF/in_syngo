@@ -16,6 +16,8 @@ class _SignupScreenState extends State<SignupScreen> {
   final ItemNameController = TextEditingController();
   final weightController = TextEditingController();
   final costController = TextEditingController();
+  final costController = TextEditingController();
+  final costController = TextEditingController();
 
   sendData() {
     final databaseReference = FirebaseDatabase.instance.ref("toy");
