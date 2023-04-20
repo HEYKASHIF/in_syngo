@@ -90,7 +90,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                  obscureText: true,
+                  // obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'NAME',
@@ -101,7 +101,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                  obscureText: true,
+                  // obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'GENDER',
@@ -112,7 +112,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                  obscureText: true,
+                  // obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'PHONE NUMBER ',
@@ -123,7 +123,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                  obscureText: true,
+                  // obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'AGE',
@@ -134,7 +134,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                  obscureText: true,
+                  // obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Email',
@@ -144,7 +144,7 @@ class _SignupScreenState extends State<SignupScreen> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                  obscureText: true,
+                  // obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Create Password',
