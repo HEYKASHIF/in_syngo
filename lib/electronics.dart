@@ -57,7 +57,7 @@ class electronicsState extends State<electronics> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'your Name please',
@@ -67,7 +67,7 @@ class electronicsState extends State<electronics> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'item name please',
@@ -77,7 +77,7 @@ class electronicsState extends State<electronics> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'how old is this',
@@ -87,7 +87,7 @@ class electronicsState extends State<electronics> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'product cost approximately',
