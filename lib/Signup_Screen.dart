@@ -19,7 +19,7 @@ class _SignupScreenState extends State<SignupScreen> {
   final numberController = TextEditingController();
   final ageController = TextEditingController();
   final emailController = TextEditingController();
-  final costController = TextEditingController();
+  final passwordController = TextEditingController();
 
   sendData() {
     final databaseReference = FirebaseDatabase.instance.ref("USER");
@@ -33,6 +33,7 @@ class _SignupScreenState extends State<SignupScreen> {
       int.parse('${numberController.text}'),
       int.parse('${ageController.text}'),
       '${emailController.text}',
+      '${passwordController.text}',
       // '$base64Image'
     );
 
@@ -47,6 +48,7 @@ class _SignupScreenState extends State<SignupScreen> {
       'number': user.number,
       'age': user.age,
       'email': user.email,
+      'password': user.password,
       // 'image': toy.image,
     });
   }
