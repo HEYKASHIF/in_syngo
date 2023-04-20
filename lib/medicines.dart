@@ -63,7 +63,7 @@ class medicineState extends State<medicines> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Your Name please',
@@ -73,7 +73,7 @@ class medicineState extends State<medicines> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Medicine Name please',
@@ -83,7 +83,7 @@ class medicineState extends State<medicines> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Manufacturing Date/Expiry Date',
@@ -93,7 +93,7 @@ class medicineState extends State<medicines> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Quantity of tablets',
