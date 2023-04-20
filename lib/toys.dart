@@ -1,8 +1,12 @@
+import 'dart:convert';
 import 'dart:io';
+import 'package:intl/intl.dart';
 
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:in_syngo/toyModle.dart';
 
 // ignore: camel_case_types
 class toys extends StatefulWidget {
@@ -38,6 +42,38 @@ class toysState extends State<toys> {
     } on PlatformException catch (e) {
       print('Failed to pick image: $e');
     }
+  }
+
+  final nameController = TextEditingController();
+  final ItemNameController = TextEditingController();
+  final weightController = TextEditingController();
+  final costController = TextEditingController();
+
+  sendData() {
+    final databaseReference = FirebaseDatabase.instance.ref("stationary");
+
+    final bytes = File(image!.path).readAsBytesSync();
+    String base64Image = "data:image/png;base64," + base64Encode(bytes);
+
+    final toy = toyModle(
+        '${nameController.text}',
+        '${ItemNameController.text}',
+        double.parse('${weightController.text}'),
+        int.parse('${costController.text}'),
+        '$base64Image');
+
+    DateTime now = DateTime.now();
+    String formattedDate = DateFormat('kk:mm:ss EEE d MMM').format(now);
+
+    databaseReference.child(formattedDate).set({
+      "ngo_id": ngo_id.toString(),
+      "status": "Request Submit",
+      'name': toy.name,
+      'statName': toy.ItemName,
+      'weight': toy.weight,
+      'cost': toy.cost,
+      'image': toy.image,
+    });
   }
 
   @override
@@ -153,7 +189,7 @@ class toysState extends State<toys> {
         Padding(
           padding: EdgeInsets.fromLTRB(100, 5, 100, 5),
           child: ElevatedButton(
-            onPressed: null,
+            onPressed: sendData,
             child: Text('SUBMIT'),
           ),
         ),
