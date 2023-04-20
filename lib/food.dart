@@ -1,5 +1,9 @@
+import 'dart:convert';
 import 'dart:io';
+import 'package:in_syngo/foodModle.dart';
+import 'package:intl/intl.dart';
 
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -40,6 +44,38 @@ class foodState extends State<food> {
     }
   }
 
+  final nameController = TextEditingController();
+  final FoodNameController = TextEditingController();
+  final weightController = TextEditingController();
+  final servingsController = TextEditingController();
+
+  sendData() {
+    final databaseReference = FirebaseDatabase.instance.ref("food");
+
+    final bytes = File(image!.path).readAsBytesSync();
+    String base64Image = "data:image/png;base64," + base64Encode(bytes);
+
+    final electro = foodModle(
+        '${nameController.text}',
+        '${FoodNameController.text}',
+        double.parse('${weightController.text}'),
+        int.parse('${servingsController.text}'),
+        '$base64Image');
+
+    DateTime now = DateTime.now();
+    String formattedDate = DateFormat('kk:mm:ss EEE d MMM').format(now);
+
+    databaseReference.child(formattedDate).set({
+      "ngo_id": ngo_id.toString(),
+      "status": "Request Submit",
+      'name': electro.name,
+      'FoodName': electro.FoodName,
+      'weight': electro.weight,
+      'servings': electro.servings,
+      'image': electro.image,
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,6 +96,7 @@ class foodState extends State<food> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: nameController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -70,6 +107,7 @@ class foodState extends State<food> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: FoodNameController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -80,6 +118,7 @@ class foodState extends State<food> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: weightController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -90,6 +129,7 @@ class foodState extends State<food> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: servingsController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -145,7 +185,7 @@ class foodState extends State<food> {
           Padding(
             padding: EdgeInsets.fromLTRB(100, 5, 100, 5),
             child: ElevatedButton(
-              onPressed: null,
+              onPressed: sendData,
               child: Text('SUBMIT'),
             ),
           ),
