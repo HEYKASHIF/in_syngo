@@ -28,10 +28,10 @@ class _LoginScreenState extends State<LoginScreen> {
       accessToken: googleAuth?.accessToken,
       idToken: googleAuth?.idToken,
     );
-    UserCredential userCredential =
-        await FirebaseAuth.instance.signInWithCredential(credential);
-    final userName = userCredential.additionalUserInfo!.username;
-    print(userCredential.additionalUserInfo!);
+    // UserCredential userCredential =
+    //     await FirebaseAuth.instance.signInWithCredential(credential);
+    // final userName = userCredential.additionalUserInfo!.username;
+    // print(userCredential.additionalUserInfo!);
 
     if (credential != null) {
       final SharedPreferences prefs = await SharedPreferences.getInstance();
