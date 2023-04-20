@@ -1,8 +1,14 @@
+import 'dart:convert';
 import 'dart:io';
+import 'package:intl/intl.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:in_syngo/electroModle.dart';
+import 'package:in_syngo/sample.dart';
 
 class electronics extends StatefulWidget {
   final int ngo_id;
@@ -37,6 +43,38 @@ class electronicsState extends State<electronics> {
     }
   }
 
+  final nameController = TextEditingController();
+  final ItemNameController = TextEditingController();
+  final ageController = TextEditingController();
+  final costController = TextEditingController();
+
+  sendData() {
+    final databaseReference = FirebaseDatabase.instance.ref("electronics");
+
+    final bytes = File(image!.path).readAsBytesSync();
+    String base64Image = "data:image/png;base64," + base64Encode(bytes);
+
+    final electro = electroModle(
+        '${nameController.text}',
+        '${ItemNameController.text}',
+        double.parse('${ageController.text}'),
+        int.parse('${costController.text}'),
+        '$base64Image');
+
+    DateTime now = DateTime.now();
+    String formattedDate = DateFormat('kk:mm:ss EEE d MMM').format(now);
+
+    databaseReference.child(formattedDate).set({
+      "ngo_id": ngo_id.toString(),
+      "status": "Request Submit",
+      'name': electro.name,
+      'ItemName': electro.ItemName,
+      'age': electro.age,
+      'cost': electro.cost,
+      'image': electro.image,
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +95,7 @@ class electronicsState extends State<electronics> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: nameController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -67,6 +106,7 @@ class electronicsState extends State<electronics> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: ItemNameController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -77,6 +117,7 @@ class electronicsState extends State<electronics> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: ageController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -87,6 +128,7 @@ class electronicsState extends State<electronics> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: costController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -146,7 +188,7 @@ class electronicsState extends State<electronics> {
           Padding(
             padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
             child: ElevatedButton(
-              onPressed: null,
+              onPressed: sendData,
               child: Text('SUBMIT'),
             ),
           ),
