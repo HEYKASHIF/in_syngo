@@ -46,6 +46,38 @@ class clothesState extends State<clothes> {
     }
   }
 
+  final nameController = TextEditingController();
+  final genderController = TextEditingController();
+  final sizeController = TextEditingController();
+  final pairController = TextEditingController();
+
+  sendData() {
+    final databaseReference = FirebaseDatabase.instance.ref("clothes");
+
+    final bytes = File(image!.path).readAsBytesSync();
+    String base64Image = "data:image/png;base64," + base64Encode(bytes);
+
+    final Cloth = clothModle(
+        '${nameController.text}',
+        '${genderController.text}',
+        double.parse('${sizeController.text}'),
+        int.parse('${pairController.text}'),
+        '$base64Image');
+
+    DateTime now = DateTime.now();
+    String formattedDate = DateFormat('kk:mm:ss EEE d MMM').format(now);
+
+    databaseReference.child(formattedDate).set({
+      "ngo_id": ngo_id.toString(),
+      "status": "Request Submit",
+      'name': Cloth.name,
+      'gender': Cloth.gender,
+      'size': Cloth.size,
+      'pair': Cloth.pair,
+      'image': Cloth.image,
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,6 +98,7 @@ class clothesState extends State<clothes> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: nameController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -76,6 +109,7 @@ class clothesState extends State<clothes> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: genderController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -86,6 +120,7 @@ class clothesState extends State<clothes> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: sizeController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -96,6 +131,7 @@ class clothesState extends State<clothes> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
+              controller: pairController,
               // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
@@ -155,7 +191,7 @@ class clothesState extends State<clothes> {
           Padding(
             padding: EdgeInsets.fromLTRB(100, 5, 100, 5),
             child: ElevatedButton(
-              onPressed: null,
+              onPressed: sendData,
               child: Text('SUBMIT'),
             ),
           ),
