@@ -16,7 +16,7 @@ class SignupScreen extends StatefulWidget {
 class _SignupScreenState extends State<SignupScreen> {
   final nameController = TextEditingController();
   final genderController = TextEditingController();
-  final weightController = TextEditingController();
+  final numberController = TextEditingController();
   final costController = TextEditingController();
   final costController = TextEditingController();
   final costController = TextEditingController();
@@ -30,7 +30,7 @@ class _SignupScreenState extends State<SignupScreen> {
     final toy = signModle(
       '${nameController.text}',
       '${genderController.text}',
-      double.parse('${weightController.text}'),
+      int.parse('${numberController.text}'),
       int.parse('${costController.text}'),
       // '$base64Image'
     );
@@ -43,7 +43,7 @@ class _SignupScreenState extends State<SignupScreen> {
       "status": "Request Submit",
       'name': toy.name,
       'gender': toy.gender,
-      'weight': toy.weight,
+      'number': toy.number,
       'cost': toy.cost,
       // 'image': toy.image,
     });
