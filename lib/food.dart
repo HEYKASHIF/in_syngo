@@ -60,7 +60,7 @@ class foodState extends State<food> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'your Name please',
@@ -70,7 +70,7 @@ class foodState extends State<food> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Food Name',
@@ -80,7 +80,7 @@ class foodState extends State<food> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'weight of the food',
@@ -90,7 +90,7 @@ class foodState extends State<food> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'how many people it can serve',
