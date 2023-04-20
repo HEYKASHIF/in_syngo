@@ -17,7 +17,7 @@ class _SignupScreenState extends State<SignupScreen> {
   final nameController = TextEditingController();
   final genderController = TextEditingController();
   final numberController = TextEditingController();
-  final costController = TextEditingController();
+  final ageController = TextEditingController();
   final costController = TextEditingController();
   final costController = TextEditingController();
 
@@ -31,7 +31,7 @@ class _SignupScreenState extends State<SignupScreen> {
       '${nameController.text}',
       '${genderController.text}',
       int.parse('${numberController.text}'),
-      int.parse('${costController.text}'),
+      int.parse('${ageController.text}'),
       // '$base64Image'
     );
 
@@ -44,7 +44,7 @@ class _SignupScreenState extends State<SignupScreen> {
       'name': toy.name,
       'gender': toy.gender,
       'number': toy.number,
-      'cost': toy.cost,
+      'age': toy.age,
       // 'image': toy.image,
     });
   }
