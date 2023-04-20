@@ -61,7 +61,7 @@ class clothesState extends State<clothes> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'your Name please',
@@ -71,7 +71,7 @@ class clothesState extends State<clothes> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'Gender',
@@ -81,7 +81,7 @@ class clothesState extends State<clothes> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'size',
@@ -91,7 +91,7 @@ class clothesState extends State<clothes> {
           Padding(
             padding: const EdgeInsets.all(12.0),
             child: TextFormField(
-              obscureText: true,
+              // obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 labelText: 'pairs',
