@@ -112,7 +112,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'GENDER',
-                      icon: Icon(Icons.password)),
+                      icon: Icon(Icons.abc)),
                 ),
               ),
 
@@ -136,7 +136,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'AGE',
-                      icon: Icon(Icons.password)),
+                      icon: Icon(Icons.numbers)),
                 ),
               ),
 
