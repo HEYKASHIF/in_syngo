@@ -88,11 +88,14 @@ class _LoginScreenState extends State<LoginScreen> {
               Padding(
                 padding: EdgeInsets.all(10),
                 child: TextField(
-                  obscureText: true,
+                  controller: numberController,
+                  keyboardType: TextInputType.number,
+                  maxLength: 10,
+                  // obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      labelText: 'USER ID',
-                      icon: Icon(Icons.email)),
+                      labelText: 'PHONE NUMBER',
+                      icon: Icon(Icons.phone_android)),
                 ),
               ),
               Padding(
