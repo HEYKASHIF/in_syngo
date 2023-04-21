@@ -133,22 +133,22 @@ class _LoginScreenState extends State<LoginScreen> {
                         );
                       } else {
                         Fluttertoast.showToast(
-                            msg: "Wrong Password",
-                            toastLength: Toast.LENGTH_SHORT,
+                            msg: "WRONG PASSSWORD",
+                            toastLength: Toast.LENGTH_LONG,
                             gravity: ToastGravity.CENTER,
                             timeInSecForIosWeb: 1,
-                            backgroundColor: Colors.red,
-                            textColor: Colors.white,
+                            backgroundColor: Color.fromARGB(255, 236, 26, 11),
+                            textColor: Color.fromARGB(255, 4, 4, 4),
                             fontSize: 16.0);
                       }
                     } else {
                       Fluttertoast.showToast(
-                          msg: "User not exit",
-                          toastLength: Toast.LENGTH_SHORT,
+                          msg: "USER NOT EXIST",
+                          toastLength: Toast.LENGTH_LONG,
                           gravity: ToastGravity.CENTER,
                           timeInSecForIosWeb: 1,
-                          backgroundColor: Colors.red,
-                          textColor: Colors.white,
+                          backgroundColor: Color.fromARGB(255, 236, 26, 11),
+                          textColor: Color.fromARGB(255, 4, 4, 4),
                           fontSize: 16.0);
                     }
                   },
