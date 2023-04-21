@@ -30,6 +30,10 @@ class _LoginScreenState extends State<LoginScreen> {
       accessToken: googleAuth?.accessToken,
       idToken: googleAuth?.idToken,
     );
+
+    var result = (await FirebaseAuth.instance.signInWithCredential(credential));
+    var _user = result.user;
+
     // UserCredential userCredential =
     //     await FirebaseAuth.instance.signInWithCredential(credential);
     // final userName = userCredential.additionalUserInfo!.username;
@@ -43,6 +47,9 @@ class _LoginScreenState extends State<LoginScreen> {
     // Once signed in, return the UserCredential
     return await FirebaseAuth.instance.signInWithCredential(credential);
   }
+
+  final numberController = TextEditingController();
+  final passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
