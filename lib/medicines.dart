@@ -143,29 +143,44 @@ class medicineState extends State<medicines> {
           Expanded(
             child: Row(
               children: [
-                (image != null)
-                    ? Expanded(
-                        child: Container(
-                          child: Image.file(
-                            image!,
-                            height: 100,
-                            width: 100,
-                          ),
-                        ),
-                      )
-                    : Expanded(
-                        child: Container(
-                          child: Image.asset(
-                            'assets/icon/icon.png',
-                            height: 100,
-                            width: 100,
-                          ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      (image != null)
+                          ? Padding(
+                              padding: const EdgeInsets.fromLTRB(8, 75, 8, 8),
+                              child: Container(
+                                child: Image.file(
+                                  image!,
+                                  height: 100,
+                                  width: 100,
+                                ),
+                              ),
+                            )
+                          : Padding(
+                              padding: const EdgeInsets.fromLTRB(8, 75, 8, 8),
+                              child: Container(
+                                child: Image.asset(
+                                  'assets/icon/icon.png',
+                                  height: 100,
+                                  width: 100,
+                                ),
+                              ),
+                            ),
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(20, 70, 20, 70),
+                        child: ElevatedButton(
+                          onPressed: sendData,
+                          child: Text('SUBMIT'),
                         ),
                       ),
-                Column(
-                  children: [
-                    Expanded(
-                      child: Padding(
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.fromLTRB(20, 70, 20, 70),
                         child: ElevatedButton(
                           onPressed: pickImageCamera,
@@ -174,26 +189,17 @@ class medicineState extends State<medicines> {
                           ),
                         ),
                       ),
-                    ),
-                    Expanded(
-                      child: Padding(
+                      Padding(
                         padding: const EdgeInsets.fromLTRB(20, 70, 20, 70),
                         child: ElevatedButton(
                           onPressed: pickImageGallery,
                           child: Text("UPLOAD IMAGE BY GALLERY"),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(100, 5, 100, 5),
-            child: ElevatedButton(
-              onPressed: sendData,
-              child: Text('SUBMIT'),
             ),
           ),
         ],
