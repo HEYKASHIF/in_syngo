@@ -49,6 +49,7 @@ dependencies:
   google_sign_in: ^6.1.0
   firebase_core: ^2.9.0
   firebase_database: ^10.1.1
+  fluttertoast: ^8.2.1
   
 
 flutter_icons:
