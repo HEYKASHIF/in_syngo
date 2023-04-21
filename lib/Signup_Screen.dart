@@ -100,7 +100,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'NAME',
-                      icon: Icon(Icons.password)),
+                      icon: Icon(Icons.person)),
                 ),
               ),
 
@@ -124,7 +124,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'PHONE NUMBER ',
-                      icon: Icon(Icons.password)),
+                      icon: Icon(Icons.phone_android)),
                 ),
               ),
 
