@@ -1,5 +1,6 @@
 import 'dart:ffi';
 import 'dart:io';
+import 'package:in_syngo/login_screen.dart';
 import 'package:intl/intl.dart';
 
 import 'package:firebase_database/firebase_database.dart';
@@ -37,12 +38,12 @@ class _SignupScreenState extends State<SignupScreen> {
       // '$base64Image'
     );
 
-    DateTime now = DateTime.now();
-    String formattedDate = DateFormat('kk:mm:ss EEE d MMM').format(now);
+    // DateTime now = DateTime.now();
+    // String formattedDate = DateFormat('kk:mm:ss EEE d MMM').format(now);
 
-    databaseReference.child(formattedDate).set({
+    databaseReference.child('${numberController.text}').set({
       // "ngo_id": ngo_id.toString(),
-      "status": "Request Submit",
+      // "status": "Request Submit",
       'name': user.name,
       'gender': user.gender,
       'number': user.number,
@@ -51,6 +52,10 @@ class _SignupScreenState extends State<SignupScreen> {
       'password': user.password,
       // 'image': toy.image,
     });
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => LoginScreen()),
+    );
   }
 
   @override
@@ -164,10 +169,6 @@ class _SignupScreenState extends State<SignupScreen> {
               ElevatedButton.icon(
                 onPressed: () {
                   sendData();
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => HomePage()),
-                  // );
                 },
                 icon: Icon(Icons.email),
                 label: Text(
