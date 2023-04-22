@@ -57,7 +57,7 @@ class _about_UsState extends State<about_Us> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Mission Statement:',
+                      'MISSION STATEMENT:',
                       style: Theme.of(context).textTheme.headline6,
                     ),
                     SizedBox(height: 8),
@@ -67,13 +67,13 @@ class _about_UsState extends State<about_Us> {
                     ),
                     SizedBox(height: 16),
                     Text(
-                      'Values:',
+                      'OUR VALUES:',
                       style: Theme.of(context).textTheme.headline6,
                     ),
                     SizedBox(height: 8),
                     ListTile(
                       leading: Icon(Icons.check),
-                      title: Text('Customer satisfaction is our top priority'),
+                      title: Text('Donation satisfaction is our top priority'),
                     ),
                     ListTile(
                       leading: Icon(Icons.check),
