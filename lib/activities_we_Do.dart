@@ -12,7 +12,7 @@ class _activitiesState extends State<activities> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ACTIVITIES WE DO'),
+        title: Text('SETTINGS'),
       ),
     );
   }
