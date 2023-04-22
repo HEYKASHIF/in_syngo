@@ -27,7 +27,7 @@ class _ContactUSState extends State<ContactUS> {
             SizedBox(height: 8),
             ListTile(
               leading: Icon(Icons.location_on),
-              title: Text('123 Main Street'),
+              title: Text('201206, TOWN MURADNAGAR'),
               subtitle: Text('Anytown, USA 12345'),
             ),
             ListTile(
