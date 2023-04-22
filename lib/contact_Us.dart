@@ -28,15 +28,15 @@ class _ContactUSState extends State<ContactUS> {
             ListTile(
               leading: Icon(Icons.location_on),
               title: Text('201206, TOWN MURADNAGAR'),
-              subtitle: Text('Anytown, USA 12345'),
+              subtitle: Text('DELHI NCR, INDIA'),
             ),
             ListTile(
               leading: Icon(Icons.phone),
-              title: Text('(123) 456-7890'),
+              title: Text('8126064785'),
             ),
             ListTile(
               leading: Icon(Icons.email),
-              title: Text('info@company.com'),
+              title: Text('Kashif'),
             ),
           ],
         ),
