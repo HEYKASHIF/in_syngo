@@ -36,7 +36,7 @@ class _ContactUSState extends State<ContactUS> {
             ),
             ListTile(
               leading: Icon(Icons.email),
-              title: Text('Kashif'),
+              title: Text('Kashifmohd269@gmail.com'),
             ),
           ],
         ),
