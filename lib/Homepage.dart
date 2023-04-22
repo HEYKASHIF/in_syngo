@@ -72,7 +72,7 @@ class HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.account_box),
-              title: Text("Profile"),
+              title: Text("PROFILE"),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(
@@ -116,7 +116,7 @@ class HomePageState extends State<HomePage> {
             ),
             ListTile(
               leading: Icon(Icons.local_activity),
-              title: Text("ACTIVITIES WE DO"),
+              title: Text("SETTING"),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(
