@@ -10,6 +10,10 @@ class Status extends StatefulWidget {
 class _StatusState extends State<Status> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('YOUR APPLICATION STATUS'),
+      ),
+    );
   }
 }
