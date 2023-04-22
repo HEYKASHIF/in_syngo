@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:in_syngo/HomeCard.dart';
+import 'package:in_syngo/Status.dart';
 import 'package:in_syngo/about_Us.dart';
 import 'package:in_syngo/activities_we_Do.dart';
 import 'package:in_syngo/contact_Us.dart';
@@ -77,6 +78,17 @@ class HomePageState extends State<HomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => profile()),
+                );
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text("HOME"),
+              onTap: () {
+                Navigator.of(context).pop();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Status()),
                 );
               },
             ),
