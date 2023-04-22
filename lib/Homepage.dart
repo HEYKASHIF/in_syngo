@@ -82,8 +82,8 @@ class HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.home),
-              title: Text("HOME"),
+              leading: Icon(Icons.switch_account_sharp),
+              title: Text("STATUS"),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(
