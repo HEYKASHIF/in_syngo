@@ -20,12 +20,12 @@ class _FAQState extends State<FAQ> {
           'There are several benefits of using Flutter, including: fast development, expressive and flexible UI, hot reload, and good performance.'
     },
     {
-      'question': 'Is Flutter only for mobile app development?',
+      'question': 'Is IN_SYNGO a NGO?',
       'answer':
           'No, Flutter can be used to develop applications for mobile, web, and desktop. It supports building for Android, iOS, web, and desktop platforms.'
     },
     {
-      'question': 'Is Flutter only for Android and iOS?',
+      'question': 'Is IN_SYNGO only for Android USERS?',
       'answer':
           'No, Flutter can be used to build applications for Android, iOS, web, and desktop. It has good support for all these platforms.'
     },
