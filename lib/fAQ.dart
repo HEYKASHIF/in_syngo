@@ -30,7 +30,7 @@ class _FAQState extends State<FAQ> {
           'No, Flutter can be used to build applications for Android, iOS, web, and desktop. It has good support for all these platforms.'
     },
     {
-      'question': 'Is Flutter only for small apps?',
+      'question': 'Is It FREE to Use IN_SYNGO app?',
       'answer':
           'No, Flutter can be used to build small as well as large and complex apps. It has the capabilities and performance to handle any size of app.'
     },
