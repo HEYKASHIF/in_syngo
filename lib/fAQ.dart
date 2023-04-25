@@ -10,7 +10,7 @@ class FAQ extends StatefulWidget {
 class _FAQState extends State<FAQ> {
   final questions = [
     {
-      'question': 'What is Flutter?',
+      'question': 'What is IN_SYNGO?',
       'answer':
           'Flutter is a mobile app development framework created by Google. It allows developers to build natively compiled applications for mobile, web, and desktop from a single codebase.'
     },
