@@ -26,15 +26,17 @@ class _about_UsState extends State<about_Us> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(
-                    'in_Syngo',
-                    style: Theme.of(context).textTheme.headline5,
+                  CircleAvatar(
+                    backgroundImage: AssetImage('assets/icon/icon.png'),
+                    radius: 60,
                   ),
                   SizedBox(height: 8),
-                  Image.asset(
-                    'assets/icon/icon.png',
-                    width: 100,
-                    height: 100,
+                  Text(
+                    'In_Syngo',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 35,
+                    ),
                   ),
                 ],
               ),
@@ -44,9 +46,20 @@ class _about_UsState extends State<about_Us> {
             Container(
                 // width: screenWidth,
                 padding: EdgeInsets.all(8),
-                child: Text(
-                  'Our company offers a wide range of high-quality products and services to meet the needs of our customers.',
-                  style: Theme.of(context).textTheme.bodyText2,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'MISSION STATEMENT:',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Our company offers a wide range of high-quality products and services to meet the needs of our customers.',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ],
                 )),
 
             //statement and values
