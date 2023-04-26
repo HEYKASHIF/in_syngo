@@ -50,9 +50,11 @@ class _about_UsState extends State<about_Us> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'MISSION STATEMENT:',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                      'INTRODUCTION:',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                      ),
                     ),
                     SizedBox(height: 8),
                     Text(
@@ -71,17 +73,21 @@ class _about_UsState extends State<about_Us> {
                   children: [
                     Text(
                       'MISSION STATEMENT:',
-                      style: Theme.of(context).textTheme.headline6,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 25,
+                      ),
                     ),
                     SizedBox(height: 8),
                     Text(
                       'Our mission is to provide high-quality products and services to our customers.',
-                      style: Theme.of(context).textTheme.bodyText2,
+                      style: TextStyle(fontSize: 20),
                     ),
                     SizedBox(height: 16),
                     Text(
                       'OUR VALUES:',
-                      style: Theme.of(context).textTheme.headline6,
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                     ),
                     SizedBox(height: 8),
                     ListTile(
