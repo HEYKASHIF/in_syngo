@@ -37,7 +37,7 @@ class profileState extends State<profile> {
               child: Text(
                 'MOHD KASHIF',
                 style: TextStyle(
-                    fontFamily: 'Billabong',
+                    fontFamily: 'mag',
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
@@ -50,7 +50,7 @@ class profileState extends State<profile> {
               child: Text(
                 'E-MAIL ID',
                 style: TextStyle(
-                    fontFamily: 'Billabong',
+                    fontFamily: 'mag',
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
@@ -63,7 +63,7 @@ class profileState extends State<profile> {
               child: Text(
                 'GENDER',
                 style: TextStyle(
-                    fontFamily: 'Billabong',
+                    fontFamily: 'mag',
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
@@ -76,7 +76,7 @@ class profileState extends State<profile> {
               child: Text(
                 'PHONE NUMBER',
                 style: TextStyle(
-                    fontFamily: 'Billabong',
+                    fontFamily: 'mag',
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
@@ -89,7 +89,7 @@ class profileState extends State<profile> {
               child: Text(
                 'AGE',
                 style: TextStyle(
-                    fontFamily: 'Billabong',
+                    fontFamily: 'mag',
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
