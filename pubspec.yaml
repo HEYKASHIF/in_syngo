@@ -97,6 +97,12 @@ flutter:
     - family: Billabong
       fonts:
         - asset: assets/fonts/Billabong.ttf
+    - family: mag
+      fonts:
+        - asset: assets/fonts/mag.ttf
+    - family: PB
+      fonts:
+        - asset: assets/fonts/PB.ttf
 #
   #  - family: gv
   #    fonts:

@@ -168,7 +168,10 @@ class HomePageState extends State<HomePage> {
         title: Text(
           "HOME",
           style: TextStyle(
-              fontFamily: 'Billabong', fontSize: 30, color: Colors.black),
+            fontFamily: 'mag',
+            fontSize: 30,
+            color: Colors.black,
+          ),
         ),
         actions: [
           Padding(

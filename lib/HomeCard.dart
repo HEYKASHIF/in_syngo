@@ -52,8 +52,9 @@ class HomeCard extends StatelessWidget {
                       Text(
                         title,
                         style: TextStyle(
-                          fontSize: 30,
-                          fontFamily: 'Billabong',
+                          // fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          fontFamily: 'mag',
                         ),
                       )
                     ],
