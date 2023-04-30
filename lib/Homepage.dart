@@ -182,15 +182,30 @@ class HomePageState extends State<HomePage> {
           )
         ],
       ),
-      body: GridView.builder(
-        itemCount: CategoryList.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-        ),
-        itemBuilder: (BuildContext context, int index) {
-          return HomeCard(CategoryList[index].cat_id, CategoryList[index].title,
-              CategoryList[index].imagepath);
-        },
+      body: Column(
+        children: [
+          Expanded(
+            child: GridView.builder(
+              itemCount: CategoryList.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+              ),
+              itemBuilder: (BuildContext context, int index) {
+                return HomeCard(CategoryList[index].cat_id,
+                    CategoryList[index].title, CategoryList[index].imagepath);
+              },
+            ),
+          ),
+          Center(
+            child: Text(
+              'Made By Mohd Kashif',
+              style: TextStyle(
+                fontFamily: 'mag',
+                fontSize: 25,
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
