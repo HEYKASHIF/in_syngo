@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:in_syngo/HomeCard.dart';
 import 'package:in_syngo/Status.dart';
 import 'package:in_syngo/about_Us.dart';
-import 'package:in_syngo/activities_we_Do.dart';
+import 'package:in_syngo/settings.dart';
 import 'package:in_syngo/contact_Us.dart';
 import 'package:in_syngo/fAQ.dart';
 import 'package:in_syngo/logOut.dart';

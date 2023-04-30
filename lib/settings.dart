@@ -12,6 +12,8 @@ class _activitiesState extends State<activities> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.pink,
         title: Text('SETTINGS'),
       ),
     );
