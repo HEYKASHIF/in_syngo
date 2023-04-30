@@ -35,32 +35,50 @@ class ListOfNgoState extends State<ListOfNgo> {
     if (cat_id == 1) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => medicines(ngo_id: ngo_id,)),
+        MaterialPageRoute(
+            builder: (context) => medicines(
+                  ngo_id: ngo_id,
+                )),
       );
     } else if (cat_id == 2) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => clothes(ngo_id: ngo_id,)),
+        MaterialPageRoute(
+            builder: (context) => clothes(
+                  ngo_id: ngo_id,
+                )),
       );
     } else if (cat_id == 3) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => toys(ngo_id: ngo_id,)),
+        MaterialPageRoute(
+            builder: (context) => toys(
+                  ngo_id: ngo_id,
+                )),
       );
     } else if (cat_id == 4) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => stationary(ngo_id: ngo_id,)),
+        MaterialPageRoute(
+            builder: (context) => stationary(
+                  ngo_id: ngo_id,
+                )),
       );
     } else if (cat_id == 5) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => food(ngo_id: ngo_id,)),
+        MaterialPageRoute(
+            builder: (context) => food(
+                  ngo_id: ngo_id,
+                )),
       );
     } else if (cat_id == 6) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => electronics(ngo_id: ngo_id,)),
+        MaterialPageRoute(
+            builder: (context) => electronics(
+                  ngo_id: ngo_id,
+                )),
       );
     }
   }
@@ -75,6 +93,7 @@ class ListOfNgoState extends State<ListOfNgo> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.pink,
           centerTitle: true,
           title: Text("LIST OF NGO"),
         ),

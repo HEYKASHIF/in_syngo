@@ -23,37 +23,41 @@ class HomeCard extends StatelessWidget {
       onTap: () {
         NavigationFunction(cat_id, context);
       },
-      child: Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        color: Colors.yellow,
-        elevation: 5,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Container(
-            height: 100,
-            width: 100,
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    (Platform.isAndroid)
-                        ? Image.asset(
-                            imagepath,
-                            height: 45,
-                            width: 45,
-                            fit: BoxFit.fill,
-                          )
-                        : Container(),
-                    Text(
-                      title,
-                      style: TextStyle(
-                        fontSize: 30,
-                        fontFamily: 'Billabong',
-                      ),
-                    )
-                  ],
+      child: Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: Card(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+          color: Colors.yellow,
+          elevation: 5,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 100,
+              width: 100,
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      (Platform.isAndroid)
+                          ? Image.asset(
+                              imagepath,
+                              height: 45,
+                              width: 45,
+                              fit: BoxFit.fill,
+                            )
+                          : Container(),
+                      Text(
+                        title,
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontFamily: 'Billabong',
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ),
