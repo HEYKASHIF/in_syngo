@@ -27,7 +27,7 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.pink,
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -162,6 +162,7 @@ class HomePageState extends State<HomePage> {
         ),
       ),
       appBar: AppBar(
+        backgroundColor: Colors.pink,
         elevation: 0,
         centerTitle: true,
         title: Text(
