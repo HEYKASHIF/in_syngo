@@ -114,9 +114,16 @@ class ListOfNgoState extends State<ListOfNgo> {
                           },
                           child: new ListTile(
                             leading: CircleAvatar(
+                              radius: 25,
                               child: new Image.network(ngo_logo),
                             ),
-                            title: Text(name),
+                            title: Text(
+                              name,
+                              style: TextStyle(
+                                fontFamily: 'mag',
+                                fontSize: 19,
+                              ),
+                            ),
                             subtitle: Text(email),
                           ),
                         )
