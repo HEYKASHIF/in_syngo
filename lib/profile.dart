@@ -14,6 +14,7 @@ class profileState extends State<profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 180, 19, 7),
         title: const Text("PROFILE"),
       ),
       body: SingleChildScrollView(
@@ -23,7 +24,7 @@ class profileState extends State<profile> {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/prof.jpg'),
+                  backgroundImage: AssetImage('assets/5.JPG'),
                   radius: 75,
                 ),
               ),
