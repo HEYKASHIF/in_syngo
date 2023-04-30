@@ -79,9 +79,9 @@ class _LoginScreenState extends State<LoginScreen> {
               Text(
                 "Login",
                 style: TextStyle(
-                    fontFamily: 'Billabong',
+                    fontFamily: 'mag',
                     color: Colors.black,
-                    fontSize: 24,
+                    fontSize: 28,
                     fontWeight: FontWeight.bold),
               ),
 
