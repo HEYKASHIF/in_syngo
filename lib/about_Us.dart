@@ -12,6 +12,8 @@ class _about_UsState extends State<about_Us> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.pink,
         title: Text('ABOUT US'),
       ),
       body: SingleChildScrollView(

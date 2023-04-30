@@ -40,6 +40,8 @@ class _FAQState extends State<FAQ> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.pink,
         title: Text('FAQs'),
       ),
       body: Padding(
